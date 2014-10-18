@@ -2,8 +2,6 @@
 
 namespace ZfcUserUserIdToId;
 
-use ZfcUser\Mapper\User;
-
 class Module
 {
     public function getConfig()
@@ -31,7 +29,7 @@ class Module
                 'zfcuser_user_mapper' => function ($sm) {
                     $options = $sm->get('zfcuser_module_options');
                     
-                    $mapper = new User();
+                    $mapper = new Mapper\User();
                     $mapper->setDbAdapter($sm->get('Zend\Db\Adapter\Adapter'));
                     $mapper->setEntityPrototype(new Entity\User());
                     $mapper->setHydrator($sm->get('zfcuser_user_hydrator'));

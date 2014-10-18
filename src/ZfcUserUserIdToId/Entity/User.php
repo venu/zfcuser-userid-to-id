@@ -19,12 +19,12 @@ class User implements UserInterface
     
     public function getId()
     {
-        return $this->userId;
+        return $this->id;
     }
 
     public function setId($id)
     {
-        $this->userId = (int) $id;
+        $this->id = (int) $id;
         return $this;
     }
  
