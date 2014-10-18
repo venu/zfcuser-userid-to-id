@@ -1,6 +1,6 @@
 <?php
 
-namespace ZfcUserExtension;
+namespace ZfcUserUserIdToId;
 
 class Module
 {
@@ -23,12 +23,8 @@ class Module
     public function getServiceConfig()
     {
         return array(
-            'invokables' => array(
-                'ZfcUserUserIdToId\Authentication\Adapter\Db' => 'ZfcUserUserIdToId\Authentication\Adapter\Db',
-            ),
             'factories' => array(
                 'zfcuser_user_hydrator' => 'ZfcUserUserIdToId\Factory\Mapper\UserHydratorFactory',
-                'zfcuser_register_form' => 'ZfcUserUserIdToId\Factory\Form\RegisterFormFactory',
                 
                 'zfcuser_user_mapper' => function ($sm) {
                     $options = $sm->get('zfcuser_module_options');
