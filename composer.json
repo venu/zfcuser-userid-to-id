@@ -1,0 +1,18 @@
+{
+    "name": "venu/zfcuser-userid-to-id",
+    "type": "library",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*",
+        "zf-commons/zfc-base": "0.1.*",
+        "zf-commons/zfc-user": "1.0.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZfcUserUserIdToId": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
